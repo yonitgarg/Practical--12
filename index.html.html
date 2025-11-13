@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marwadi University - Education for Better Tomorrow</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #800020;
+            --secondary-color: #FFD700;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .vision-mission {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .course-outcomes {
+            padding: 80px 0;
+        }
+        
+        .facilities {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .facility-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        /* Custom Media Queries */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                text-align: center;
+            }
+            
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            
+            .card {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-university me-2"></i>Marwadi University
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#facilities">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Education for Better Tomorrow</h1>
+            <p class="lead mb-4">Marwadi University is committed to providing quality education and fostering innovation, research, and holistic development.</p>
+            <a href="#about" class="btn btn-warning btn-lg">Explore More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">About Marwadi University</h2>
+                    <p>Marwadi University, located in Rajkot, Gujarat, is one of the leading educational institutions in Western India. Established with a vision to provide world-class education, the university offers a wide range of undergraduate, postgraduate, and doctoral programs.</p>
+                    <p>With state-of-the-art infrastructure, experienced faculty, and industry-oriented curriculum, Marwadi University aims to nurture future leaders and professionals who can contribute to society and the global economy.</p>
+                    <a href="#" class="btn btn-primary mt-3">Learn More</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/1753683722phpKWyckY.jpeg" alt="Marwadi University Campus" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Vision & Mission</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            <i class="fas fa-eye me-2"></i>Our Vision
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">To be a globally recognized university providing value-based education, fostering research and innovation, and developing socially responsible citizens and professionals.</p>
+                            <p class="card-text">We envision creating an ecosystem that promotes excellence in teaching, learning, and research while addressing the challenges of the 21st century.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            <i class="fas fa-bullseye me-2"></i>Our Mission
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i>To provide quality education through innovative teaching methodologies</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>To promote research and development activities</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>To foster industry-academia collaboration</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>To develop entrepreneurial skills among students</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>To inculcate ethical values and social responsibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Outcomes Section -->
+    <section id="courses" class="course-outcomes">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Programs & Course Outcomes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            Engineering & Technology
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Programs Offered:</h5>
+                            <ul>
+                                <li>Computer Engineering</li>
+                                <li>Civil Engineering</li>
+                                <li>Mechanical Engineering</li>
+                                <li>Electrical Engineering</li>
+                                <li>Electronics & Communication</li>
+                            </ul>
+                            <h5 class="card-title mt-3">Course Outcomes:</h5>
+                            <ul>
+                                <li>Strong foundation in engineering principles</li>
+                                <li>Problem-solving and analytical skills</li>
+                                <li>Industry-ready technical expertise</li>
+                                <li>Research and innovation capabilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            Management Studies
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Programs Offered:</h5>
+                            <ul>
+                                <li>BBA</li>
+                                <li>MBA</li>
+                                <li>B.Com</li>
+                                <li>M.Com</li>
+                                <li>Professional Accounting</li>
+                            </ul>
+                            <h5 class="card-title mt-3">Course Outcomes:</h5>
+                            <ul>
+                                <li>Business acumen and managerial skills</li>
+                                <li>Strategic thinking and decision-making</li>
+                                <li>Leadership and team management</li>
+                                <li>Entrepreneurial mindset</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            Computer Applications
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Programs Offered:</h5>
+                            <ul>
+                                <li>BCA</li>
+                                <li>MCA</li>
+                                <li>B.Sc. IT</li>
+                                <li>M.Sc. IT</li>
+                                <li>Data Science</li>
+                            </ul>
+                            <h5 class="card-title mt-3">Course Outcomes:</h5>
+                            <ul>
+                                <li>Programming and software development skills</li>
+                                <li>Database management expertise</li>
+                                <li>Web and mobile application development</li>
+                                <li>Data analytics and AI/ML knowledge</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="facilities">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Facilities</h2>
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="facility-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Library</h4>
+                    <p>Well-stocked library with digital resources, journals, and research materials.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="facility-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>Laboratories</h4>
+                    <p>State-of-the-art labs for practical learning and research activities.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="facility-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h4>Computer Center</h4>
+                    <p>High-tech computer labs with latest software and high-speed internet.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="facility-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4>Hostel</h4>
+                    <p>Comfortable accommodation with all necessary amenities for students.</p>
+                </div>
+            </div>
+            <div class="row text-center mt-4">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="facility-icon">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h4>Sports Complex</h4>
+                    <p>Indoor and outdoor sports facilities for physical fitness and recreation.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="facility-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4>Cafeteria</h4>
+                    <p>Hygienic and nutritious food options for students and staff.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="facility-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h4>Medical Center</h4>
+                    <p>Healthcare facilities with qualified medical professionals.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="facility-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h4>Wi-Fi Campus</h4>
+                    <p>Seamless internet connectivity across the entire campus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Marwadi University</h5>
+                    <p>Marwadi University aims to provide quality education and foster innovation, research, and holistic development of students.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Rajkot-Morbi Highway, Gauridad, Rajkot, Gujarat</li>
+                        <li><i class="fas fa-phone me-2"></i> +91 9509104994</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@marwadiuniversity.ac.in</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Marwadi University. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
